@@ -87,7 +87,8 @@ router.post('/fabricante/edit/:id', async (req, res)=>{
 router.get('/fabricante/delete/:id', async (req, res) => {
     const { id } = req.params;
     await pool.query('DELETE FROM fabricante WHERE codigo = ?', [id]);
-    res.render('/fabricante');
+    console.log(id);
+    res.render('fabricante');
 });
 
 //producto-fabricante
